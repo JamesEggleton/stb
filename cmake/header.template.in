@@ -1,0 +1,5 @@
+#ifdef STB_USE_HUNTER
+@HEADER_UNDEFS@
+#endif
+
+@HEADER_STRING@
