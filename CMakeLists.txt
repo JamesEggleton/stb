@@ -1,8 +1,8 @@
-# Copyright (c) 2017-2021, Ruslan Baratov, Rahul Sheth
+# Copyright (c) 2017-2023, Ruslan Baratov, Rahul Sheth
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.2)
-project(stb VERSION 0.0.1)
+cmake_minimum_required(VERSION 3.5)
+project(stb VERSION 20231012)
 
 set(STBCC_GRID_COUNT_X_LOG2 "10" CACHE STRING "STBCC_GRID_COUNT_X_LOG2")
 set(STBCC_GRID_COUNT_Y_LOG2 "10" CACHE STRING "STBCC_GRID_COUNT_Y_LOG2")
@@ -64,7 +64,7 @@ function(GenerateHeader header_name defines)
     endif()
 endfunction()
 
-GenerateHeader(stb.h "STB_DEFINE")
+GenerateHeader(deprecated/stb.h "STB_DEFINE")
 GenerateHeader(stb_c_lexer.h "STB_C_LEXER_IMPLEMENTATION")
 GenerateHeader(stb_connected_components.h "STBCC_GRID_COUNT_X_LOG2 ${STBCC_GRID_COUNT_X_LOG2};STBCC_GRID_COUNT_Y_LOG2 ${STBCC_GRID_COUNT_Y_LOG2};STB_CONNECTED_COMPONENTS_IMPLEMENTATION")
 set(STB_DIVIDE_DEFINES "STB_DIVIDE_IMPLEMENTATION")
@@ -83,7 +83,7 @@ GenerateHeader(stb_easy_font.h "")
 GenerateHeader(stb_herringbone_wang_tile.h "STB_HERRINGBONE_WANG_TILE_IMPLEMENTATION")
 GenerateHeader(stb_hexwave.h "STB_HEXWAVE_IMPLEMENTATION")
 GenerateHeader(stb_image.h "STB_IMAGE_IMPLEMENTATION")
-GenerateHeader(stb_image_resize.h "STB_IMAGE_RESIZE_IMPLEMENTATION")
+GenerateHeader(stb_image_resize2.h "STB_IMAGE_RESIZE_IMPLEMENTATION")
 GenerateHeader(stb_image_write.h "STB_IMAGE_WRITE_IMPLEMENTATION")
 GenerateHeader(stb_include.h "STB_INCLUDE_IMPLEMENTATION")
 GenerateHeader(stb_leakcheck.h "STB_LEAKCHECK_IMPLEMENTATION")
